@@ -40,6 +40,12 @@ $routes->get('/products', 'Product::getAll');
 $routes->get('/products/(:name)', 'Product::getByName/$1');
 $routes->get('/products/(:num)', 'Product::getById/$1');
 
+$routes->post('/products', 'Product::create');
+$routes->post('/products/(:num)', 'Product::update/$1');
+
+$routes->delete('/products/(:num)', 'Product::delete/$1');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
